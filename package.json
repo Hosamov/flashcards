@@ -1,0 +1,19 @@
+{
+  "name": "flashcards",
+  "version": "1.0.0",
+  "description": "A flashcard game for kids",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hosamov/flashcards.git"
+  },
+  "author": "Matt Coale",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hosamov/flashcards/issues"
+  },
+  "homepage": "https://github.com/Hosamov/flashcards#readme"
+}
