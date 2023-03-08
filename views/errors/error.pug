@@ -1,0 +1,16 @@
+extends ../layout.pug 
+
+
+block content
+  div.error-container
+    h1.error= 'Error!'
+    p Uh oh! 😮 That's no good. It looks like we encountered an error. 
+    if err
+      p Error Status: #{err.status || 500}
+      p.not-found-p Error: #{err}
+    hr
+
+    button.home.btn(onclick="history.back()") Return to previous page
+    button.home.btn(onclick="location.href='/'") Return to Homepage
+
+    div.page-not-found-stack

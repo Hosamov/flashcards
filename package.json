@@ -4,6 +4,7 @@
   "description": "A flashcard game for kids",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/Hosamov/flashcards/issues"
   },
-  "homepage": "https://github.com/Hosamov/flashcards#readme"
+  "homepage": "https://github.com/Hosamov/flashcards#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.1",
+    "nodemon": "^2.0.21",
+    "pug": "^3.0.2"
+  }
 }
