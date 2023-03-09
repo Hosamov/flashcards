@@ -44,19 +44,30 @@ const randomize = require('./includes/random');
 // //* Routes
 // require('./routes')(app);
 
+answersArr = [];
+for(let i = 0; i < 20; i++) {
+  answersArr.push({num1: randomize(vanillaPudding), num2: randomize(vanillaPudding)});
+}
+
 //* Root(/) GET route
 app.get('/', (req, res, next) => {
-  let num1 = randomize(jello);
-  let num2 = randomize(jello);
+  let place = 0;
+  let num1 = answersArr[place].num1;
+  let num2 = answersArr[place].num2;
+  console.log(place);
   const add = addition(num1, num2);
-  const subtract = subtraction(num1, num2);
+  const subtract = subtraction(
+    num1 >= num2 ? num1 : num2,
+    num2 <= num1 ? num2 : num1
+  );
+  // if user chooses addition:
+    // render addition
   res.render('./home', {
     num1: num1,
     num2: num2,
     add: add,
-    subtract: subtract,
-    multiply: multiplication,
-    divide: division,
+    place: place,
+    randomize: randomize,
   });
 });
 

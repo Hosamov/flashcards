@@ -6,5 +6,7 @@ block content
 
     .home-container
       h1 #{num1} + #{num2} = #{add} 
-      h1 #{num1} - #{num2} = #{subtract}
       
+      button(type='button' class='btn btn-')=add
+      button(type='button' class='btn btn-') #{randomize(add) !== add ? Math.ceil(Math.random() * add) : Math.ceil(Math.random() * add)}
+      button(type='button' class='btn btn-')=add
